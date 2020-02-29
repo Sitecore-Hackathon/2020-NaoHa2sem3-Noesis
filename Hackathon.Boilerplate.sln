@@ -37,6 +37,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "History", "History", "{1764
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.History", "src\Feature\History\code\Hackathon.Feature.History.csproj", "{C0EE8767-E693-4565-859C-40C934DF48F3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SubmitAction", "SubmitAction", "{23EAC157-53AA-4568-833D-A932C91A2313}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Feature.SubmitAction", "src\Feature\SubmitAction\code\Hackaton.Feature.SubmitAction.csproj", "{28C25B04-5672-440D-8D64-7CF2905E4FB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{C0EE8767-E693-4565-859C-40C934DF48F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0EE8767-E693-4565-859C-40C934DF48F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0EE8767-E693-4565-859C-40C934DF48F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C25B04-5672-440D-8D64-7CF2905E4FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C25B04-5672-440D-8D64-7CF2905E4FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C25B04-5672-440D-8D64-7CF2905E4FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C25B04-5672-440D-8D64-7CF2905E4FB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +69,8 @@ Global
 		{52A7D6B3-1250-4B83-80D0-9A69B7A92869} = {F4BA01E9-A109-43F0-9337-5B2DFEA44FCA}
 		{176458A7-3CF6-40C4-862B-2AE78FB4E6F0} = {17DD5718-6E13-4F2C-9738-B410396D4552}
 		{C0EE8767-E693-4565-859C-40C934DF48F3} = {176458A7-3CF6-40C4-862B-2AE78FB4E6F0}
+		{23EAC157-53AA-4568-833D-A932C91A2313} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{28C25B04-5672-440D-8D64-7CF2905E4FB8} = {23EAC157-53AA-4568-833D-A932C91A2313}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
