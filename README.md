@@ -1,38 +1,44 @@
-![Hackathon Logo](documentation/images/hackathon.png?raw=true "Hackathon Logo")
+Documentation
+Summary
 
-# Submission Boilerplate
+Category: Sitecore Hackathon Website 
 
-Welcome to Sitecore Hackathon 2020.
+Replacement of the existing Sitecore Hackathon Website
+The main goal was reproduce the most of important feature in the website and
+Develop some new ideas.
 
-The Hackathon site can be found at http://www.sitecorehackathon.org/sitecore-hackathon-2020/
+Pre-requisites
 
-The purpose of this repository is to provide a sample which shows how to structure the Hackathon submissions.
+Please make sure you have the following requirements:
+    - Sitecore 9.3.0 rev. 003498 
+    - Sitecore Experience Accelerator 9.3.0
 
+Installation
 
-## Entry Submission Requirements 
+For installation will be need to install the package of website:
 
-All teams are required to submit the following as part of their entry submission on or before the end of the Hackathon on **Saturday  February 29th 2020 at 8PM EST**. The modules should be based on [Sitecore 9.3 (Initial Release)](https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx).
+1. Use the Sitecore Installation wizard to install the package (#link-to-package)
 
-**Failure to meet any of the requirements will result in automatic disqualification.** Please reach out to any of the organisers or judges if you require any clarification.
+Configuration
 
-- Sitecore 9.3 (Initial Release) Module (Module install package)
-   - An installation Sitecore Package (`.zip` or `.update`)
+It will be necessary to do configuration on SMTP Server in (C:\inetpub\wwwroot\naoha2sem3sc.dev.local\App_Config\Sitecore\EmailExperience) whith the code below:
+ 
+ <smtpSettings type="Sitecore.EDS.Core.Net.Smtp.SmtpSettings, Sitecore.EDS.Core" singleInstance="true">
+    <server>smtp.sendgrid.net</server>
+    <port>587</port>
+    <userName></userName>
+    <password></password>
+    <authenticationMethod>None</authenticationMethod>
+    <startTls>false</startTls>
+    <proxySettings ref="exm/eds/proxySettings" />
+</smtpSettings>
 
-- Module code in a public Git source repository. We will be judging (amongst other things):
-  - Cleanliness of code
-  - Commenting where necessary
-  - Code Structure
-  - Standard coding standards & naming conventions
+Usage
 
-- Precise and Clear Installation Instructions document (1 – 2 pages)
-- Module usage documentation on [Readme.md](documentation) file on the Git Repository (2 – 5 pages)
-  - Module Purpose
-  - Module Sitecore Hackathon Category
-  - How does the end user use the Module?
-  - Screenshots, etc.
+In order to reproduce the actual hackathon website, we have use some SXA functionalities to facilitate the creation of any page and the render of the content with the components of SXA.
+Also, we have developed a new idea of form to hackathon website to subscribe new hackathon teams, using sitecore forms 
 
-- Create a 2 – 10 minutes video explaining the module’s functionality (A link to youtube video)
+Video
 
-  - What problem was solved
-  - How did you solve it
-  - What is the end result
+https://www.youtube.com/watch?v=HgMEvaSWuog
+

@@ -1,0 +1,35 @@
+﻿@model Hackathon.Feature.Navigation.Models.NavigationFooterModel
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <script>
+                window.twttr = (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        t = window.twttr || {};
+                    if (d.getElementById(id)) return t;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+
+                    t._e = [];
+                    t.ready = function (f) {
+                        t._e.push(f);
+                    };
+
+                    return t;
+                }(document, "script", "twitter-wjs"));</script>
+            <a class="twitter-timeline"
+               href="@Model.Twitter"
+               data-height="300"
+               data-chrome="noborders, transparent, noheader">
+
+                Tweets by
+            </a>
+        </div>
+        <div class="col-6">
+            <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+            <a data-pin-do="embedUser" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="@Model.Pinterest"></a>
+        </div>
+    </div>
+</div>

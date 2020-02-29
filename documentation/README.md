@@ -1,71 +1,44 @@
-# Documentation
+Documentation
+Summary
 
-The documentation for this years Hackathon must be provided as a readme in Markdown format as part of your submission. 
+Category: Sitecore Hackathon Website 
 
-You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
+Replacement of the existing Sitecore Hackathon Website
+The main goal was reproduce the most of important feature in the website and
+Develop some new ideas.
 
-Examples of things to include are the following.
+Pre-requisites
 
-## Summary
+Please make sure you have the following requirements:
+    - Sitecore 9.3.0 rev. 003498 
+    - Sitecore Experience Accelerator 9.3.0
 
-**Category:** Hackathon Category
+Installation
 
-What is the purpose of your module? What problem does it solve and how does it do that?
+For installation will be need to install the package of website:
 
-## Pre-requisites
+1. Use the Sitecore Installation wizard to install the package (#link-to-package)
 
-Does your module rely on other Sitecore modules or frameworks?
+Configuration
 
-- List any dependencies
-- Or other modules that must be installed
-- Or services that must be enabled/configured
+It will be necessary to do configuration on SMTP Server in (C:\inetpub\wwwroot\naoha2sem3sc.dev.local\App_Config\Sitecore\EmailExperience) whith the code below:
+ 
+ <smtpSettings type="Sitecore.EDS.Core.Net.Smtp.SmtpSettings, Sitecore.EDS.Core" singleInstance="true">
+    <server>smtp.sendgrid.net</server>
+    <port>587</port>
+    <userName></userName>
+    <password></password>
+    <authenticationMethod>None</authenticationMethod>
+    <startTls>false</startTls>
+    <proxySettings ref="exm/eds/proxySettings" />
+</smtpSettings>
 
-## Installation
+Usage
 
-Provide detailed instructions on how to install the module, and include screenshots where necessary.
+In order to reproduce the actual hackathon website, we have use some SXA functionalities to facilitate the creation of any page and the render of the content with the components of SXA.
+Also, we have developed a new idea of form to hackathon website to subscribe new hackathon teams, using sitecore forms 
 
-1. Use the Sitecore Installation wizard to install the [package](#link-to-package)
-2. ???
-3. Profit
+Video
 
-## Configuration
+https://www.youtube.com/watch?v=HgMEvaSWuog
 
-How do you configure your module once it is installed? Are there items that need to be updated with settings, or maybe config files need to have keys updated?
-
-Remember you are using Markdown, you can provide code samples too:
-
-```xml
-<?xml version="1.0"?>
-<!--
-  Purpose: Configuration settings for my hackathon module
--->
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
-  <sitecore>
-    <settings>
-      <setting name="MyModule.Setting" value="Hackathon" />
-    </settings>
-  </sitecore>
-</configuration>
-```
-
-## Usage
-
-Provide documentation  about your module, how do the users use your module, where are things located, what do icons mean, are there any secret shortcuts etc.
-
-Please include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
-
-![Hackathon Logo](images/hackathon.png?raw=true "Hackathon Logo")
-
-You can embed images of different formats too:
-
-![Deal With It](images/deal-with-it.gif?raw=true "Deal With It")
-
-And you can embed external images too:
-
-![Random](https://placeimg.com/480/240/any "Random")
-
-## Video
-
-Please provide a video highlighing your Hackathon module submission and provide a link to the video. Either a [direct link](https://www.youtube.com/watch?v=EpNhxW4pNKk) to the video, upload it to this documentation folder or maybe upload it to Youtube...
-
-[![Sitecore Hackathon Video Embedding Alt Text](https://img.youtube.com/vi/EpNhxW4pNKk/0.jpg)](https://www.youtube.com/watch?v=EpNhxW4pNKk)
