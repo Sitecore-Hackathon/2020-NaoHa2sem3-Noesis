@@ -1,0 +1,12 @@
+﻿@model Hackathon.Feature.FAQ.Models.FAQViewModel
+<div class="row container">
+    @foreach (KeyValuePair<string, string> questionAnswer in Model.ListQuestion)
+    {
+        <div class="col-12">
+            <span><b>Q. @questionAnswer.Key</b></span>
+        </div>
+        <div class="col-12">
+            <span>A. @questionAnswer.Value</span>
+        </div>
+    }
+</div>
