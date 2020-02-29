@@ -1,17 +1,27 @@
 ﻿@using Sitecore.Data.Items;
 @using Sitecore.Mvc.Extensions;
 @using Sitecore.Mvc;
+@using System;
 @using Sitecore.Mvc.Presentation
-@using System.Text.RegularExpressions;
-@using Hackathon.Feature.History;
+@using Hackathon.Feature.History.Models;
+@model Hackathon.Feature.History.Models.HistoryModel
 
 
 @{
-    <div style="height: 200px; padding: 1px 0 0 0;">
-        <div class="card">
-            <h2 class="card__title">Card Title</h2>
-            <h6 class="card__subtitle">Card Subitle</h6>
-            <div class="card__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    foreach (var winner in Model.WinnerList)
+    {
+        <div style="height: 200px; padding: 1px 0 0 0;">
+            <div class="card">
+                <h2 class="card__title">@winner.Team</h2>
+                <h6 class="card__subtitle">@winner.Topic</h6>
+                @{
+                    if (winner.Photo != string.Empty)
+                    {
+                        <img src="@winner.Photo" alt="alt" height="42" width="42">
+                    }
+                }
+            </div>
         </div>
-    </div>
+    }
+
 }
