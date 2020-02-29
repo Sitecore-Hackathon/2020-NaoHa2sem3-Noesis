@@ -17,8 +17,8 @@ Installation
 
 For installation will be need to install the package of website:
 
-1. Use the Sitecore Installation wizard to install the package (#link-to-package)
-
+1. Use the Sitecore Installation wizard to install the Hackathon2020Package https://github.com/Sitecore-Hackathon/2020-NaoHa2sem3-Noesis/commit/839819ff046f2b17e8d6c653a951ab1a59a5d98f
+2. Use the Sitecore Installation wizard to install the Hackathon Tenant https://github.com/Sitecore-Hackathon/2020-NaoHa2sem3-Noesis/blob/master/documentation/Hackathon%20Tenant-1%20(1).zip
 Configuration
 
 It will be necessary to do configuration on SMTP Server in (C:\inetpub\wwwroot\naoha2sem3sc.dev.local\App_Config\Sitecore\EmailExperience) whith the code below:
